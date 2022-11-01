@@ -1,0 +1,10 @@
+*.iml
+.idea
+*.project
+*.theia
+*.classpath
+
+.settings/
+client/target/
+server/target/
+target/

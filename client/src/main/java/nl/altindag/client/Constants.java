@@ -1,0 +1,18 @@
+package nl.altindag.client;
+
+import java.util.Optional;
+
+public final class Constants {
+
+    private static final String DEFAULT_SERVER_URL = "https://localhost:8443";
+    public static final String HELLO_ENDPOINT = "/api/hello";
+    public static final String HEADER_KEY_CLIENT_TYPE = "client-type";
+
+    private Constants() {}
+
+    public static String getServerUrl() {
+        return Optional.ofNullable(System.getProperty("url"))
+                .orElse(DEFAULT_SERVER_URL);
+    }
+
+}
